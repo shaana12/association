@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/shaana12/association.git/static/css/main.03037d7c.css",
+    "main.js": "/shaana12/association.git/static/js/main.dcd6f4ee.js",
+    "static/js/453.97819c4f.chunk.js": "/shaana12/association.git/static/js/453.97819c4f.chunk.js",
+    "static/media/projet2.png": "/shaana12/association.git/static/media/projet2.f02d8c622b1d3a852051.png",
+    "static/media/projet3.png": "/shaana12/association.git/static/media/projet3.27f1575cca9518806d7a.png",
+    "static/media/projet1.png": "/shaana12/association.git/static/media/projet1.826b892baa5def468389.png",
+    "static/media/vision.png": "/shaana12/association.git/static/media/vision.6c6c4b27e0d4774fc93e.png",
+    "static/media/bg.png": "/shaana12/association.git/static/media/bg.ab1b1b3174bb09a0f325.png",
+    "static/media/tete3.png": "/shaana12/association.git/static/media/tete3.cec80638f5ca536ac7cb.png",
+    "static/media/tete2.png": "/shaana12/association.git/static/media/tete2.13c57cbc2448c0495df0.png",
+    "static/media/tete1.png": "/shaana12/association.git/static/media/tete1.79468758f40dd80bdb9b.png",
+    "static/media/mon-logo.png": "/shaana12/association.git/static/media/mon-logo.5714a5a3bb4e4d93e576.png",
+    "static/media/tete5.png": "/shaana12/association.git/static/media/tete5.41ee91e11ba12b39230a.png",
+    "static/media/tete4.png": "/shaana12/association.git/static/media/tete4.c7002848e0e8b4bf04cc.png",
+    "index.html": "/shaana12/association.git/index.html",
+    "main.03037d7c.css.map": "/shaana12/association.git/static/css/main.03037d7c.css.map",
+    "main.dcd6f4ee.js.map": "/shaana12/association.git/static/js/main.dcd6f4ee.js.map",
+    "453.97819c4f.chunk.js.map": "/shaana12/association.git/static/js/453.97819c4f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03037d7c.css",
+    "static/js/main.dcd6f4ee.js"
+  ]
+}
