@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename='/association'>
       <div className="App">
         {/* Définition des routes */}
         <Routes>
