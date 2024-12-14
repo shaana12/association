@@ -66,7 +66,7 @@ const Home: React.FC = () => {
       <div className="md:w-1/2 p-4 text-white">
         <h3 className="text-5xl gris text-center mb-12">Notre vision</h3>
         <p className="gris text-left mb-6">
-        La Fondation Jeune Maman Célibatair est une
+        La Fondation Jeune Maman Célibataire est une
 organisation dédiée à l’accompagnement et à
 l’autonomisation des jeunes mères célibataires au
 Congo. Cette fondation s’efforce de répondre aux
