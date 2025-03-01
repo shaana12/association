@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         {/* Section À propos */}
         <section
   id="about"
-  className="py-16  scroll-mt-20 bg-cover bg-center bg-no-repeat h-[80vh]"
+  className="py-16  scroll-mt-20 bg-cover bg-center bg-no-repeat md:h-[80vh] h-[65vh]"
   style={{ backgroundImage: `url(${backgroundImage})` }}
 >
 </section>
@@ -95,53 +95,59 @@ const Home: React.FC = () => {
     <h2 className="text-3xl text-white text-center mb-12">NOS PROJETS</h2>
     
     {/* Projet 1 */}
-<div className="flex flex-col md:flex-row items-center mb-12">
-  <div className="md:w-1/2 p-4 ">
-    <div className="h-auto max-h-[50vh] rounded-lg mb-8">
-      <Carousel />
+    <div className="flex flex-col md:flex-row items-center mb-12">
+      <div className="md:w-1/2 p-4">
+        <img
+          src={projet1}
+          alt="Description Projet 1"
+          className="h-auto max-h-[50vh] rounded-lg shadow-lg"
+        />
+      </div>
+      <div className="md:w-1/2 p-4 text-white">
+        <h3 className="text-5xl text-left mb-16">Matériel pédagogique</h3>
+        <p className="text-gray-300 text-left mb-6">
+          Le matériel pédagogique en langue locale est souvent obsolète. Nous collaborons avec les chefs d’établissement et les maisons d’édition pour que les élèves aient accès à des manuels scolaires qui sont à jour, adaptés à leur âge et écrits dans leur langue maternelle.
+        </p>
+        
+      </div>
     </div>
-  </div>
-  <div className="md:w-1/2 p-4 text-white">
-    <h3 className="text-5xl text-left mb-16">Matériel pédagogique</h3>
-    <p className="text-gray-300 text-left mb-6">
-      Le matériel pédagogique en langue locale est souvent obsolète. Nous collaborons avec les chefs d’établissement et les maisons d’édition pour que les élèves aient accès à des manuels scolaires qui sont à jour, adaptés à leur âge et écrits dans leur langue maternelle.
-    </p>
-  </div>
-</div>
 
 
 
     {/* Projet 2 */}
     <div className="flex flex-col md:flex-row-reverse items-center mb-12">
       <div className="md:w-1/2 p-4">
-        <div className="h-auto max-h-[50vh] rounded-lg mb-8">
-          <Carousel/>
-          
-          </div>
+        <img
+          src={projet2}
+          alt="Description Projet 2"
+          className="h-auto max-h-[50vh] rounded-lg shadow-lg"
+        />
       </div>
       <div className="md:w-1/2 p-4 text-white">
         <h3 className="text-5xl text-left mb-16">Formation continue pour les enseignants</h3>
         <p className="text-gray-300 text-left mb-6">
           Nous développons des programmes de formation continue qui répondent précisément aux besoins des enseignants et des élèves. De la formation aux nouvelles technologies aux méthodes pédagogiques innovantes, nous aidons les enseignants à améliorer l’attractivité et l’efficacité de leurs cours.
         </p>
-      
+        
       </div>
     </div>
+
 
     {/* Projet 3 */}
     <div className="flex flex-col md:flex-row items-center mb-12">
       <div className="md:w-1/2 p-4">
-        <div className="h-auto max-h-[50vh] rounded-lg mb-8">
-        <Carousel/>
-          
-          </div>
+        <img
+          src={projet3}
+          alt="Description Projet 3"
+          className="h-auto max-h-[50vh] rounded-lg shadow-lg"
+        />
       </div>
       <div className="md:w-1/2 p-4 text-white">
         <h3 className="text-5xl text-left mb-16">Soutien aux communautés</h3>
         <p className="text-gray-300 text-left mb-6">
           Tout le monde est concerné par l‘enseignement. Notre travail ne se limite pas aux établissements scolaires. Nous nous assurons aussi que les élèves bénéficient du soutien nécessaire à leur apprentissage des savoirs.
         </p>
-      
+        
       </div>
     </div>
   </div>
