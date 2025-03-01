@@ -14,6 +14,9 @@ import backgroundImage from '../assets/bg.png';
 import backImage from '../assets/pngtree-white-brush-stroke-title-frame-text-box-png-image_10192874.png';
 import bgImage from '../assets/IMG_0411.jpg';
 import { useInView } from "react-intersection-observer";
+import PayPalRedirectButton from "../components/paypalButton";
+import Carousel from "../components/carousel";
+import PayPalDonationSection from "../components/paypalButton";
 
 
 const Home: React.FC = () => {
@@ -41,50 +44,49 @@ const Home: React.FC = () => {
       {/* Contenu principal */}
       <main className="flex-grow">
         {/* Section À propos */}
-<section
+        <section
   id="about"
-  className="py-16 min-h-screen scroll-mt-20 bg-cover bg-center bg-no-repeat "
-  style={{ backgroundImage: `url(${backgroundImage})`}}
+  className="py-16  scroll-mt-20 bg-cover bg-center bg-no-repeat h-[80vh]"
+  style={{ backgroundImage: `url(${backgroundImage})` }}
 >
-  <div className="container mx-auto px-4 text-center p-8  ">
-    <h2 className="text-4xl text-yellow-400 paragraphe font-bold mb-6 mt-96 " ></h2>
-    <br /><br /><br /><br /><br /><br />
+</section>
+
+
+
+        {/* Section Notre vision */}
+<section id="vision" className="py-16 bg-white scroll-mt-20">
+  <div className="flex flex-col md:flex-row items-center">
+    {/* Texte en haut sur mobile, à droite sur grand écran */}
+    <div className="md:w-1/2 p-4 text-white">
+      <h3 className="text-5xl gris text-center mb-12">Notre vision</h3>
+      <p className="gris text-left mb-6">
+        La Fondation Jeune Maman Célibataire est une organisation dédiée à l’accompagnement et à
+        l’autonomisation des jeunes mères célibataires au Congo. Cette fondation s’efforce de répondre aux
+        nombreux défis socio-économiques auxquels les jeunes mères sont confrontées dans ce pays, où
+        les infrastructures de soutien sont souvent limitées et où les préjugés sociaux peuvent accentuer leur
+        isolement. <br /><br /> Tout le monde est concerné par l‘enseignement. Notre travail ne se limite pas aux
+        établissements scolaires. Nous nous assurons aussi que les élèves bénéficient du soutien nécessaire à leur
+        apprentissage des savoirs. <br /><br />
+      </p>
+      
+    </div>
+
+    {/* Image en bas sur mobile, à gauche sur grand écran */}
+    <div className="md:w-1/2 p-4">
+      <img
+        src={vision}
+        alt="Description Projet 3"
+        className="h-auto max-h-[70vh] rounded-lg shadow-lg"
+      />
+    </div>
   </div>
 </section>
 
 
-        {/* Section Notre vision */}
-        <section id="vision" className="py-16 bg-white min-h-screen scroll-mt-20">
-        <div className="flex flex-col md:flex-row items-center  ">
-      <div className="md:w-1/2  p-4">
-        <img
-          src={vision}
-          alt="Description Projet 3"
-          className="h-auto max-h-[70vh] rounded-lg shadow-lg"
-        />
-      </div>
-      <div className="md:w-1/2 p-4 text-white">
-        <h3 className="text-5xl gris text-center mb-12">Notre vision</h3>
-        <p className="gris text-left mb-6">
-        La Fondation Jeune Maman Célibataire est une
-organisation dédiée à l’accompagnement et à
-l’autonomisation des jeunes mères célibataires au
-Congo. Cette fondation s’efforce de répondre aux
-nombreux défis socio-économiques auxquels les
-jeunes mères sont confrontées dans ce pays, où
-les infrastructures de soutien sont souvent
-limitées et où les préjugés sociaux peuvent
-accentuer leur isolement. <br /><br /> Tout le monde est concerné par l‘enseignement. Notre travail ne se limite pas aux établissements scolaires. Nous nous assurons aussi que les élèves bénéficient du soutien nécessaire à leur apprentissage des savoirs. <br /><br />
-        </p>
-        <button
-          className="bg-beige text-white py-6 px-12  hover:bg-blue-700 transition"
-          onClick={() => window.location.href = "/projet"}
-        >
-          En savoir plus
-        </button>
-      </div>
-    </div>
-        </section>
+
+
+
+
 
        {/* Section Nos projets */}
 <section id="projects" className="py-16 bg-gris min-h-screen scroll-mt-20">
@@ -93,71 +95,53 @@ accentuer leur isolement. <br /><br /> Tout le monde est concerné par l‘ensei
     <h2 className="text-3xl text-white text-center mb-12">NOS PROJETS</h2>
     
     {/* Projet 1 */}
-    <div className="flex flex-col md:flex-row items-center mb-12">
-      <div className="md:w-1/2 p-4">
-        <img
-          src={projet1}
-          alt="Description Projet 1"
-          className="h-auto max-h-[50vh] rounded-lg shadow-lg"
-        />
-      </div>
-      <div className="md:w-1/2 p-4 text-white">
-        <h3 className="text-5xl text-left mb-16">Matériel pédagogique</h3>
-        <p className="text-gray-300 text-left mb-6">
-          Le matériel pédagogique en langue locale est souvent obsolète. Nous collaborons avec les chefs d’établissement et les maisons d’édition pour que les élèves aient accès à des manuels scolaires qui sont à jour, adaptés à leur âge et écrits dans leur langue maternelle.
-        </p>
-        <button
-          className="bg-beige text-white py-6 px-12  hover:bg-blue-700 transition"
-          onClick={() => window.location.href = "/projet"}
-        >
-          En savoir plus
-        </button>
-      </div>
+<div className="flex flex-col md:flex-row items-center mb-12">
+  <div className="md:w-1/2 p-4 ">
+    <div className="h-auto max-h-[50vh] rounded-lg mb-8">
+      <Carousel />
     </div>
+  </div>
+  <div className="md:w-1/2 p-4 text-white">
+    <h3 className="text-5xl text-left mb-16">Matériel pédagogique</h3>
+    <p className="text-gray-300 text-left mb-6">
+      Le matériel pédagogique en langue locale est souvent obsolète. Nous collaborons avec les chefs d’établissement et les maisons d’édition pour que les élèves aient accès à des manuels scolaires qui sont à jour, adaptés à leur âge et écrits dans leur langue maternelle.
+    </p>
+  </div>
+</div>
+
+
 
     {/* Projet 2 */}
     <div className="flex flex-col md:flex-row-reverse items-center mb-12">
       <div className="md:w-1/2 p-4">
-        <img
-          src={projet2}
-          alt="Description Projet 2"
-          className="h-auto max-h-[50vh] rounded-lg shadow-lg"
-        />
+        <div className="h-auto max-h-[50vh] rounded-lg mb-8">
+          <Carousel/>
+          
+          </div>
       </div>
       <div className="md:w-1/2 p-4 text-white">
         <h3 className="text-5xl text-left mb-16">Formation continue pour les enseignants</h3>
         <p className="text-gray-300 text-left mb-6">
           Nous développons des programmes de formation continue qui répondent précisément aux besoins des enseignants et des élèves. De la formation aux nouvelles technologies aux méthodes pédagogiques innovantes, nous aidons les enseignants à améliorer l’attractivité et l’efficacité de leurs cours.
         </p>
-        <button
-          className="bg-beige text-white py-6 px-12  hover:bg-blue-700 transition"
-          onClick={() => window.location.href = "/projet"}
-        >
-          En savoir plus
-        </button>
+      
       </div>
     </div>
 
     {/* Projet 3 */}
     <div className="flex flex-col md:flex-row items-center mb-12">
       <div className="md:w-1/2 p-4">
-        <img
-          src={projet3}
-          alt="Description Projet 3"
-          className="h-auto max-h-[50vh] rounded-lg shadow-lg"
-        />
+        <div className="h-auto max-h-[50vh] rounded-lg mb-8">
+        <Carousel/>
+          
+          </div>
       </div>
       <div className="md:w-1/2 p-4 text-white">
         <h3 className="text-5xl text-left mb-16">Soutien aux communautés</h3>
         <p className="text-gray-300 text-left mb-6">
           Tout le monde est concerné par l‘enseignement. Notre travail ne se limite pas aux établissements scolaires. Nous nous assurons aussi que les élèves bénéficient du soutien nécessaire à leur apprentissage des savoirs.
         </p>
-        <button
-          className="bg-beige text-white py-6 px-12  hover:bg-blue-700 transition"
-          onClick={() => window.location.href = "/projet"}
-        >
-          En savoir plus
-        </button>
+      
       </div>
     </div>
   </div>
@@ -168,7 +152,7 @@ accentuer leur isolement. <br /><br /> Tout le monde est concerné par l‘ensei
 
 
         {/* Section Notre équipe */}
-        <section id="team" className="py-16 bg-white min-h-screen scroll-mt-20">
+        <section id="team" className="py-16 bg-white mb-16  scroll-mt-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Notre équipe</h2>
             <p className="text-gray-700 mb-12">
@@ -204,7 +188,7 @@ accentuer leur isolement. <br /><br /> Tout le monde est concerné par l‘ensei
               </div>
               <div>
                 <img
-                  src={tete4}
+                  src={tete5}
                   alt="Membre 4"
                   className="w-32 h-32 mx-auto rounded-full mb-4"
                 />
@@ -213,7 +197,7 @@ accentuer leur isolement. <br /><br /> Tout le monde est concerné par l‘ensei
               </div>
               <div>
                 <img
-                  src={tete5}
+                  src={tete4}
                   alt="Membre 5"
                   className="w-32 h-32 mx-auto rounded-full mb-4"
                 />
@@ -233,19 +217,41 @@ accentuer leur isolement. <br /><br /> Tout le monde est concerné par l‘ensei
 
         {/* Bouton Faire un don */}
         <section id="donate" className="py-16 bg-beige min-h-screen scroll-mt-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Soutenez notre mission</h2>
-            <p className="text-white text-lg mb-8">
-              Votre contribution nous aide à continuer nos efforts et à atteindre nos objectifs.
-            </p>
-            <button
-              className="bg-white beige font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
-              onClick={() => alert("Merci pour votre soutien !")}
-            >
-              Faire un don
-            </button>
-          </div>
-        </section>
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-4xl font-bold text-white mb-8">Soutenez notre mission</h2>
+    <p className="text-white  mb-16 ">
+      Votre contribution nous aide à continuer nos efforts et à atteindre nos objectifs.
+    </p>
+    
+    {/* Témoignage */}
+    <div className="bg-white p-6 rounded-lg shadow-lg  mb-10 md:mb-16 max-w-lg mx-auto">
+      <p className="italic text-gray-700">"Grâce à votre soutien, j'ai pu acheter des fournitures scolaires pour mes enfants. Merci infiniment !"</p>
+      <span className="block mt-4 font-semibold text-gray-900">— Amina, maman célibataire</span>
+    </div>
+
+    {/* Objectifs des dons */}
+<div className="grid grid-cols-3 gap-6 text-white mb-10 md:mb-16">
+  <div className="p-4 rounded-lg text-center">
+    <h3 className="text-2xl font-bold">10€</h3>
+    <p className="text-xs">1 kit de fournitures scolaires</p>
+  </div>
+  <div className="p-4 rounded-lg text-center">
+    <h3 className="text-2xl font-bold">25€</h3>
+    <p className="text-xs">1 semaine de formation pour une jeune maman</p>
+  </div>
+  <div className="p-4 rounded-lg text-center">
+    <h3 className="text-2xl font-bold">50€</h3>
+    <p className="text-xs">Un accompagnement personnalisé sur 1 mois</p>
+  </div>
+</div>
+
+
+    {/* Appel à l’action */}
+    <p className="text-lg text-white font-semibold mb-6">Chaque don, petit ou grand, change une vie. Faites partie du changement aujourd’hui.</p>
+    
+    <PayPalDonationSection/>
+  </div>
+</section>
 
 
 
